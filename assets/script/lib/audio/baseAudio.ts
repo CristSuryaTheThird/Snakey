@@ -75,6 +75,9 @@ export class BaseAudio extends Component {
     public reload(vol?: number) {
         if (!this.audioSource) {
             this.audioSource = this.getComponent(AudioSource);
+           
+        }
+        if(!this.audioClip){
             this.audioClip = this.getAudioClip();
             this.setupAudio(vol);
         }

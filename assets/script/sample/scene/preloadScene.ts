@@ -82,7 +82,7 @@ export class PreloadScene extends Component {
     private handleBackgroundMusic() {
         const { backgroundMusic } = this;
         if (!backgroundMusic) return;
-
+        console.log(backgroundMusic);
         backgroundMusic.play();
 
         /** Add background music node as persist root node. */
