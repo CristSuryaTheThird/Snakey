@@ -252,8 +252,15 @@ export class SnakeController extends Component {
 
       if (levelBoard[snakeYIdx][snakeXIdx] === 1) {
         return false;
-      } else {
-        console.log(levelBoard[snakeYIdx][snakeXIdx]);
+      }
+
+      if (i !== 0) {
+        if (
+          snakeParts.parts[i].x === snakeParts.parts[0].x &&
+          snakeParts.parts[i].y === snakeParts.parts[0].y
+        ) {
+          return false;
+        }
       }
 
       if (i < snakeParts.parts.length - 1) {
